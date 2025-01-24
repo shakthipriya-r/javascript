@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Temparature converter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Celsius to farenheit<br>
+            farenheit to Celsius
+        </h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Celsius">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to Farenheit</button>
+        </div>
+        <div>
+            <button type="submit" onclick="convert2()">Convert to Celsius</button>
+        </div>
+
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+      function convert(){
+        let cel= Number(document.getElementById("input").value)
+        let faren=cel*(9/5)+32
+        let result=document.getElementById("result")
+        result.innerHTML=faren
+      }
+      function convert2(){
+        let far= Number(document.getElementById("input").value)
+        let cel=(5*(far-32))/9
+        let result=document.getElementById("result")
+        result.innerHTML=cel
+      }
+    </script>
+</body>
+</html>
